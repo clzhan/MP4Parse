@@ -88,5 +88,6 @@
 #include "MP4.UDTA.h"
 #include "MP4.VMHD.h"
 #include "MP4.XML.h"
+#include <stdio.h>
 
 #endif /* _ATOMS_H_ */

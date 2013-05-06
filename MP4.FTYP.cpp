@@ -30,7 +30,7 @@
 /* $Id$ */
 
 #include "MP4.FTYP.h"
-#include <csting>
+#include <memory.h>
 
 using namespace MP4;
           

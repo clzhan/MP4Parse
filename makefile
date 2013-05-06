@@ -1,0 +1,18 @@
+CC = g++
+RM =rm
+
+INCLUDES   = -I./include/
+CFLAGS   += -O2 -g $(INCLUDES)
+
+OBJS =MP4.Atom.o MP4.BinaryStream.o MP4.BXML.o MP4.CO64.o MP4.ContainerAtom.o MP4.CPRT.o MP4.CTTS.o MP4.DataAtom.o MP4.DREF.o MP4.ELST.o MP4.File.o MP4.FREE.o MP4.FRMA.o MP4.FTYP.o MP4.FullBox.o MP4.HDLR.o MP4.HMHD.o MP4.IINF.o MP4.ILOC.o MP4.IMIF.o MP4.IPMC.o MP4.MDAT.o MP4.MDHD.o MP4.MEHD.o MP4.MFHD.o MP4.MFRO.o MP4.MVHD.o MP4.PADB.o mp4parse.o MP4.Parser.o MP4.PDIN.o MP4.PITM.o MP4.SBGP.o MP4.SCHI.o MP4.SCHM.o MP4.SDTP.o MP4.SGPD.o MP4.SMHD.o MP4.STCO.o MP4.STDP.o MP4.STSC.o MP4.STSD.o MP4.STSH.o MP4.STSS.o MP4.STSZ.o MP4.STTS.o MP4.STZ2.o MP4.SUBS.o MP4.TFHD.o MP4.TFRA.o MP4.TKHD.o MP4.TREF.o MP4.TREX.o MP4.TRUN.o MP4.UDTA.o MP4.UnknownAtom.o MP4.VMHD.o MP4.XML.o
+
+TARGET = myapp
+
+all:$(TARGET)
+$(TARGET):$(OBJS)
+	  $(CC) $(CFLAGS) $(OBJS)  -o $@
+%.o:%.cpp
+	$(CC) -c $(CFLAGS) $< -o $@
+
+clean:
+	rm *.o
